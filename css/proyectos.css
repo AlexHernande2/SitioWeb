@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;600;700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Variables css */
+:root {
+    --yellow-color: 52;
+    --green-color: 115;
+    --pink-color: 300;
+    --white-color: hsl(0, 0%, 100%);
+    --black-color: hsl(0, 0, 0%);
+
+    --body-font: "Montserrat Alternates", sans-serif;
+    --biggest-font-size: 2rem;
+    --normal-font-size: 1.5rem;
+    --small-font-size: .938rem;
+    --small-font-size: .813rem;
+
+    /* font weight */
+    --font-regular: 400;
+    --font-semi-bold: 600;
+    --font-bold: 700;
+
+}
+
+/* Responsive typography */
+@media screen and (min-width: 1150px) {
+    :root {
+        --biggest-font-size: 3rem;
+        --big-font-size: 2.5rem;
+        --normal-font-size: 1rem;
+        --small-font-size: .875rem;
+
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0b0b14;
+    color: white;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: #00f5a0;
+    filter: blur(150px);
+    opacity: 0.15;
+    top: -100px;
+    left: -100px;
+    z-index: -1;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    max-width: 1120px;
+    margin-inline: auto;
+    padding-inline: 1.5rem;
+
+}
+
+.card-green {
+    --hue: var(--yellow-color);
+}
+
+
+/* ======CARD=========== */
+.card {
+    position: relative;
+    padding-block: 5rem;
+    min-height: 100vh;
+}
+
+.card-container {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    gap: 2rem;
+}
+
+
+.card_article {
+    position: relative;
+    border-radius: 2rem;
+    overflow: hidden;
+}
+
+.card_img {
+    border-radius: 2rem;
+    transition: transform .4s;
+}
+
+
+.card_shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg,
+            hsla(0, 100%, 100%, 0) 70%,
+            hsl(98, 67%, 30%) 100%);
+}
+
+.card_data {
+    color: var(--white-color);
+    position: absolute;
+    left: 1.5rem;
+    bottom: 2rem;
+}
+
+.card_name {
+    font-size: var(--big-font-size);
+    margin-bottom: .25rem;
+}
+
+.card_profession {
+    display: block;
+    font-size: var(--small-font-size);
+}
+
+.card_clip{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+/* media */
+/* @media screen and (min-width: 760px) {
+    .card__container {
+        grid-template-columns: repeat(3, 260px);
+    }
+} */
+
+/* large */
+
+/* @media screen and (min-width: 760px) {
+    .card-container {
+        grid-template-columns: repeat(3, 450px)
+    }
+} */
