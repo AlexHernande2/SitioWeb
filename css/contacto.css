@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: sans-serif;
+    background-color: #0b0b14;
+    color: white;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: #00f5a0;
+    filter: blur(150px);
+    opacity: 0.15;
+    top: -100px;
+    left: -100px;
+    z-index: -1;
+}
+
+.container-form {
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.formulario_contacto {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 420px;
+   
+    background: #111827;
+    border: 1px solid rgba(255,255,255,.08);
+    box-shadow: 0 0 20px rgba(0,0,0,.3);
+    border-radius: 5px;
+    padding: 30px;
+}
+
+input,
+textarea {
+    margin-bottom: 20px;
+    padding: 12px;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.1) ;
+    background: #525e6e;
+    color: white;
+    outline: none;
+}
+.container-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn_enviar{
+    padding: 10px;
+    border-radius: 10px;
+    width: 50%;
+    cursor: pointer;
+    box-shadow: #00f5a0;
+}
+
+.btn_enviar:hover{
+    background: #00f5a0;
+}

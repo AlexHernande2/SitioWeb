@@ -6,7 +6,7 @@
     --green-color: 115;
     --pink-color: 300;
     --white-color: hsl(0, 0%, 100%);
-    --black-color: hsl(0, 0, 0%);
+    --black-color: hsl(0, 0%, 0%);
 
     --body-font: "Montserrat Alternates", sans-serif;
     --biggest-font-size: 2rem;
@@ -24,8 +24,8 @@
 /* Responsive typography */
 @media screen and (min-width: 1150px) {
     :root {
-        --biggest-font-size: 3rem;
-        --big-font-size: 2.5rem;
+        --biggest-font-size: 8rem;
+        --big-font-size: 5rem;
         --normal-font-size: 1rem;
         --small-font-size: .875rem;
 
@@ -98,13 +98,22 @@ img {
     position: relative;
     border-radius: 2rem;
     overflow: hidden;
+    
 }
 
-.card_img {
+
+/* .card_img {
+    border-radius: 2rem;
+    transition: transform .4s;
+} */
+
+.card_img{
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
     border-radius: 2rem;
     transition: transform .4s;
 }
-
 
 .card_shadow {
     position: absolute;
@@ -113,19 +122,18 @@ img {
     width: 100%;
     height: 100%;
     background: linear-gradient(180deg,
-            hsla(0, 100%, 100%, 0) 70%,
-            hsl(98, 67%, 30%) 100%);
+            hsla(0, 100%, 58%, 0) 70%,
+            hsl(147, 95%, 61%) 100%);
 }
 
 .card_data {
-    color: var(--white-color);
+    color: var(--black-color);
     position: absolute;
     left: 1.5rem;
     bottom: 2rem;
 }
 
 .card_name {
-    font-size: var(--big-font-size);
     margin-bottom: .25rem;
 }
 
@@ -134,11 +142,104 @@ img {
     font-size: var(--small-font-size);
 }
 
-.card_clip{
+/* menu 3 - */
+.card_clip {
     position: absolute;
     top: 1rem;
     right: 1rem;
+    background-color: hsl(var(--hue), 90%, 50%);
+    box-shadow: 0 0 16px 4px hsl(var(--hue), 90%, 50%);
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 1.5rem;
+    color: var(--black-color);
+    cursor: pointer;
+    transition: transform .4s;
+    z-index: 10;
 }
+
+.card_article:hover .card_img {
+    transform: scale(1.4);
+}
+
+/* Informacion de layouyt */
+
+.info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: hsla(0, 0%, 0%, .35);
+    backdrop-filter: blur(10px);
+    padding: 3rem 1.5rem 1.5rem;
+    color: hsl(var(--green-color), 90%, 50%);
+    clip-path: circle(15px at calc(100% - 32px) 32px);
+    transition: clip-path .5s ease-in-out;
+}
+
+.info_name {
+    font-size: var(--biggest-font-size);
+    margin-bottom: .5rem;
+}
+
+.info_btn {
+    display: inline-flex;
+    background-color: hsl(var(--hue), 90%, 50%);
+    box-shadow: 0 0 12px hsl(var(--hue), 90%, 50%);
+    padding: .5rem .75rem;
+    border-radius: .5rem;
+    color: var(--black-color);
+    font-size: var(--small-font-size);
+    font-weight: var(--font-semi-bold);
+    transition: box-shadow .4s;
+}
+
+.info_btn:hover {
+    box-shadow: 0 0 20px hsl(var(--hue), 90%, 50%);
+}
+
+.info_social {
+    position: absolute;
+    left: 1.5rem;
+    bottom: 1.5rem;
+    display: flex;
+    column-gap: .5rem;
+
+}
+
+.info__link {
+    background-color: hsl(var(--hue), 90%, 50%);
+    box-shadow: 0 0 12px hsl(var(--hue), 90%, 50%);
+    width: 2rem;
+    height: 2rem;
+    border-radius: .75rem;
+    display: grid;
+    place-items: center;
+    font-size: 1.5rem;
+    color: var(--black-color);
+    transition: transform .4s;
+}
+
+.info_link:hover {
+    transform: translateY(-.25rem);
+
+}
+
+/* ============Rotate Icom */
+.card_article:hover .card_clip {
+    transform: rotate(-45deg);
+}
+
+/* Clip path animation */
+.info:hover,
+.card_clip:hover~.info {
+    clip-path: circle(100%);
+}
+
 
 /* media */
 /* @media screen and (min-width: 760px) {
