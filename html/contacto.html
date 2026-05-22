@@ -9,21 +9,27 @@
 </head>
 
 <body>
-    <h1>Contactar</h1>
+
     <div class="container-form">
+
         <form action="" class="formulario_contacto">
+            <h1 class="titulo">Contactar</h1>
             <label for="nombre">Nombre</label>
             <input type="text" class="nombre" required>
             <label for="contacto">Contacto</label>
-            <input type="text" class="contacto" required>
+            <input type="email" class="contacto" required placeholder="example@gmail.com">
             <label for="descripcion">Texto</label>
-            <textarea name="" id="descripcion" required></textarea>
+            <textarea name="" id="descripcion" required placeholder="Te escribimos de empresas Bolivar......"></textarea>
             <div class="container-btn">
-                  <button class="btn_enviar">Enviar</button>
+                <button type="submit" class="btn_enviar primary">Enviar</button>
             </div>
-          
+
         </form>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <script src="../js/contacto.js"></script>
 
 </body>
 

@@ -9,6 +9,7 @@ body {
     font-family: sans-serif;
     background-color: #0b0b14;
     color: white;
+  
 }
 
 body::before {
@@ -38,12 +39,12 @@ body::before {
     flex-direction: column;
     width: 100%;
     max-width: 420px;
-   
     background: #111827;
-    border: 1px solid rgba(255,255,255,.08);
-    box-shadow: 0 0 20px rgba(0,0,0,.3);
+    border: 1px solid rgba(255, 255, 255, .08);
+    box-shadow: 0 0 20px rgba(0, 0, 0, .3);
     border-radius: 5px;
     padding: 30px;
+    
 }
 
 input,
@@ -52,24 +53,67 @@ textarea {
     padding: 12px;
     width: 100%;
     border-radius: 10px;
-    border: 1px solid rgba(0, 0, 0, 0.1) ;
+    border: 1px solid rgba(0, 0, 0, 0.1);
     background: #525e6e;
     color: white;
     outline: none;
 }
-.container-btn{
+
+.container-btn {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.btn_enviar{
+
+.btn_enviar {
+    position: relative;
     padding: 10px;
     border-radius: 10px;
     width: 50%;
     cursor: pointer;
-    box-shadow: #00f5a0;
+    z-index: 1;
+    overflow: hidden;
+    color: #fffefe;
+}
+
+.primary::before {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    background: conic-gradient(#00f5a0,
+            #00d9f5,
+            #7c3aed,
+            #00f5a0);
+    animation: rotate 4s linear infinite;
+    z-index: -2;
+}
+
+.primary::after{
+    content: "";
+    position: absolute;
+    inset: 3px;
+    background: hsl(220, 93%, 11%);
+    border-radius: 10px;
+    z-index: -1;
 }
 
 .btn_enviar:hover{
-    background: #00f5a0;
+    transform: translateY(-3px);
 }
+.titulo{
+     text-align: center;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+

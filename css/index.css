@@ -63,21 +63,7 @@ body::before {
 
 }
 
-/* .btn{
-    padding: 12px 22px;
-    border-radius: 10px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: transform .5s;
-} */
 
-
-
-/* .primary{
-    border: 1px solid #1f1fe0;
-    background: linear-gradient(135deg, #00f5a0, #00d9f5);
-    color: #0b0b14;
-} */
 
 .btn {
     position: relative;
