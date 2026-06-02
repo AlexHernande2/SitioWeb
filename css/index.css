@@ -189,7 +189,8 @@ body::before {
     filter: blur(10px);
     opacity: 0.8;
 }
-.cursos{
+
+.cursos {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
@@ -210,7 +211,7 @@ body::before {
     color: #000;
 }
 
-.card-inner p{
+.card-inner p {
     text-align: left;
 }
 
@@ -246,7 +247,7 @@ body::before {
 
 .card-front {
     margin: 10px 0;
-    
+
 }
 
 .card-back {
@@ -258,6 +259,23 @@ body::before {
     box-sizing: border-box;
 }
 
+@media(min-width: 430px) and (max-width: 1457px) {
+    .hero {
+        flex-direction: column;
+        height: auto;
+        padding: 30px 20px;
+
+    }
+
+    .image-wrapper {
+        width: 400px;
+    }
+
+    .cursos {
+        flex-direction: column;
+        height: auto;
+    }
+}
 
 
 
