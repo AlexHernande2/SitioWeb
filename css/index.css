@@ -259,7 +259,7 @@ body::before {
     box-sizing: border-box;
 }
 
-@media(min-width: 330px) and (max-width: 1457px) {
+@media(min-width: 250px) and (max-width: 1457px) {
     .hero {
         flex-direction: column;
         height: auto;
