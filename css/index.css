@@ -23,14 +23,18 @@ body::before {
     z-index: -1;
 }
 
+.container {
+    max-width: 1110px;
+    margin-inline: auto;
+
+}
+
 .hero {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
     padding: 60px;
-    max-width: 1110px;
-    margin-inline: auto;
     gap: 40px;
 }
 
@@ -193,6 +197,10 @@ body::before {
 .cursos {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
 }
 
 .card {
@@ -272,8 +280,13 @@ body::before {
     }
 
     .cursos {
-        flex-direction: column;
-        height: auto;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card {
+        width: 200px;
+        height: 200px;
+
     }
 }
 
