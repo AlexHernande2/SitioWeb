@@ -308,12 +308,12 @@ body::before {
     }
 
     .card {
-        width: 180px;
+        width: 160px;
         height: 200px;
     }
 
     .card-inner p {
-        font-size: 13px;
+        font-size: 10px;
     }
     .card-inner h2 {
         font-size: 15px;
